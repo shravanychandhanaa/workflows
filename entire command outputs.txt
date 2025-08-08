@@ -1,0 +1,193 @@
+echo "# My DevOps Project" > README.md
+
+C:\Users\ashuc\Desktop\Elevate lab\Git workflows assignment>echo "This repository manages a DevOps project." >> README.md
+
+C:\Users\ashuc\Desktop\Elevate lab\Git workflows assignment>echo "print('Hello, DevOps!')" > main.py
+
+C:\Users\ashuc\Desktop\Elevate lab\Git workflows assignment>git add README.md main.py
+
+C:\Users\ashuc\Desktop\Elevate lab\Git workflows assignment>git commit -m "Initial commit: Add README and basic main script"
+[master (root-commit) f3f074f] Initial commit: Add README and basic main script
+ 2 files changed, 3 insertions(+)
+ create mode 100644 README.md
+ create mode 100644 main.py
+
+C:\Users\ashuc\Desktop\Elevate lab\Git workflows assignment>git add remote origin https://github.com/shravanychandhanaa/workflows.git
+fatal: pathspec 'remote' did not match any files
+
+C:\Users\ashuc\Desktop\Elevate lab\Git workflows assignment>git remote add origin https://github.com/shravanychandhanaa/workflows.git
+
+C:\Users\ashuc\Desktop\Elevate lab\Git workflows assignment>git branch -M main
+
+C:\Users\ashuc\Desktop\Elevate lab\Git workflows assignment>git push -u origin main
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (4/4), 381 bytes | 127.00 KiB/s, done.
+Total 4 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/shravanychandhanaa/workflows.git
+ * [new branch]      main -> main
+branch 'main' set up to track 'origin/main'.
+
+C:\Users\ashuc\Desktop\Elevate lab\Git workflows assignment>git checkout -b dev
+Switched to a new branch 'dev'
+
+C:\Users\ashuc\Desktop\Elevate lab\Git workflows assignment>git push -u origin dev
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+remote:
+remote: Create a pull request for 'dev' on GitHub by visiting:
+remote:      https://github.com/shravanychandhanaa/workflows/pull/new/dev
+remote:
+To https://github.com/shravanychandhanaa/workflows.git
+ * [new branch]      dev -> dev
+branch 'dev' set up to track 'origin/dev'.
+
+C:\Users\ashuc\Desktop\Elevate lab\Git workflows assignment>git checkout -b feature/add-new-functionality dev
+Switched to a new branch 'feature/add-new-functionality'
+
+C:\Users\ashuc\Desktop\Elevate lab\Git workflows assignment>git branch
+  dev
+* feature/add-new-functionality
+  main
+
+C:\Users\ashuc\Desktop\Elevate lab\Git workflows assignment>echo "
+"
+
+C:\Users\ashuc\Desktop\Elevate lab\Git workflows assignment>def new_function():
+'def' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\ashuc\Desktop\Elevate lab\Git workflows assignment>    return 'New functionality added!'
+'return' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\ashuc\Desktop\Elevate lab\Git workflows assignment>
+C:\Users\ashuc\Desktop\Elevate lab\Git workflows assignment>print(new_function())
+Unable to initialize device PRN
+
+C:\Users\ashuc\Desktop\Elevate lab\Git workflows assignment>echo /
+/
+
+C:\Users\ashuc\Desktop\Elevate lab\Git workflows assignment>notepad main.py
+
+C:\Users\ashuc\Desktop\Elevate lab\Git workflows assignment>git add main.py
+
+C:\Users\ashuc\Desktop\Elevate lab\Git workflows assignment>git commit -m "feat: Add new-function to main.py"
+[feature/add-new-functionality a4d20cf] feat: Add new-function to main.py
+ 1 file changed, 4 insertions(+), 1 deletion(-)
+
+C:\Users\ashuc\Desktop\Elevate lab\Git workflows assignment>git push -u origin feature/add-new-functionality
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 370 bytes | 185.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+remote:
+remote: Create a pull request for 'feature/add-new-functionality' on GitHub by visiting:
+remote:      https://github.com/shravanychandhanaa/workflows/pull/new/feature/add-new-functionality
+remote:
+To https://github.com/shravanychandhanaa/workflows.git
+ * [new branch]      feature/add-new-functionality -> feature/add-new-functionality
+branch 'feature/add-new-functionality' set up to track 'origin/feature/add-new-functionality'.
+
+C:\Users\ashuc\Desktop\Elevate lab\Git workflows assignment>git branch -d feature/add-new-functionality
+error: cannot delete branch 'feature/add-new-functionality' used by worktree at 'C:/Users/ashuc/Desktop/Elevate lab/Git workflows assignment'
+
+C:\Users\ashuc\Desktop\Elevate lab\Git workflows assignment>git checkout dev
+Switched to branch 'dev'
+Your branch is up to date with 'origin/dev'.
+
+C:\Users\ashuc\Desktop\Elevate lab\Git workflows assignment>git branch -d feature/add-new-functionality
+warning: deleting branch 'feature/add-new-functionality' that has been merged to
+         'refs/remotes/origin/feature/add-new-functionality', but not yet merged to HEAD
+Deleted branch feature/add-new-functionality (was a4d20cf).
+
+C:\Users\ashuc\Desktop\Elevate lab\Git workflows assignment>git branch
+* dev
+  main
+
+C:\Users\ashuc\Desktop\Elevate lab\Git workflows assignment>git pull origin dev
+remote: Enumerating objects: 1, done.
+remote: Counting objects: 100% (1/1), done.
+remote: Total 1 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+Unpacking objects: 100% (1/1), 919 bytes | 306.00 KiB/s, done.
+From https://github.com/shravanychandhanaa/workflows
+ * branch            dev        -> FETCH_HEAD
+   f3f074f..e737ae6  dev        -> origin/dev
+Updating f3f074f..e737ae6
+Fast-forward
+ main.py | 5 ++++-
+ 1 file changed, 4 insertions(+), 1 deletion(-)
+
+C:\Users\ashuc\Desktop\Elevate lab\Git workflows assignment>git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+C:\Users\ashuc\Desktop\Elevate lab\Git workflows assignment>git merge dev
+Updating f3f074f..e737ae6
+Fast-forward
+ main.py | 5 ++++-
+ 1 file changed, 4 insertions(+), 1 deletion(-)
+
+C:\Users\ashuc\Desktop\Elevate lab\Git workflows assignment>git push origin main
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/shravanychandhanaa/workflows.git
+   f3f074f..e737ae6  main -> main
+
+C:\Users\ashuc\Desktop\Elevate lab\Git workflows assignment>git branch
+  dev
+* main
+
+C:\Users\ashuc\Desktop\Elevate lab\Git workflows assignment>notepad .gitignore
+
+C:\Users\ashuc\Desktop\Elevate lab\Git workflows assignment>git rm .gitignore
+fatal: pathspec '.gitignore' did not match any files
+
+C:\Users\ashuc\Desktop\Elevate lab\Git workflows assignment>git add .gitignore
+
+C:\Users\ashuc\Desktop\Elevate lab\Git workflows assignment>git commit -m "chore: Add .gitignore file"
+[main a93adf2] chore: Add .gitignore file
+ 1 file changed, 19 insertions(+)
+ create mode 100644 .gitignore
+
+C:\Users\ashuc\Desktop\Elevate lab\Git workflows assignment>git branch
+  dev
+* main
+
+C:\Users\ashuc\Desktop\Elevate lab\Git workflows assignment>git push origin main
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 472 bytes | 236.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/shravanychandhanaa/workflows.git
+   e737ae6..a93adf2  main -> main
+
+C:\Users\ashuc\Desktop\Elevate lab\Git workflows assignment>git tag -a v1.0.0 -m "Release version 1.0.0"
+
+C:\Users\ashuc\Desktop\Elevate lab\Git workflows assignment>git push origin v1.0.0
+Enumerating objects: 1, done.
+Counting objects: 100% (1/1), done.
+Writing objects: 100% (1/1), 185 bytes | 185.00 KiB/s, done.
+Total 1 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/shravanychandhanaa/workflows.git
+ * [new tag]         v1.0.0 -> v1.0.0
+
+C:\Users\ashuc\Desktop\Elevate lab\Git workflows assignment>git add .
+
+C:\Users\ashuc\Desktop\Elevate lab\Git workflows assignment>git commit -m "pushing changes"
+[main c36e43e] pushing changes
+ 1 file changed, 600 insertions(+), 2 deletions(-)
+
+C:\Users\ashuc\Desktop\Elevate lab\Git workflows assignment>git push origin main
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 3.73 KiB | 478.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/shravanychandhanaa/workflows.git
+   a93adf2..c36e43e  main -> main
